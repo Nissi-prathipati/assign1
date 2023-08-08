@@ -1,0 +1,19 @@
+
+
+<form style="margin: auto;width:220px">
+    <div class="container">
+        <h2>User Details</h2>
+            <table class="table table-sm table-bordered m-t-2">
+                <tr>
+                    <th>Name </th>
+                    <th>Age </th>
+                    <th>Designation</th>
+                </tr>
+                <tr *ngFor="let i of User">
+                    <td>{{i.name}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.designation}}</td>
+                </tr>
+            </table>
+    </div>
+</form>
