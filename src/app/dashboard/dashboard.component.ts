@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SampleService } from '../sample.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,8 +15,16 @@ export class DashboardComponent {
     {name:'Kavya',age:'25',designation:'RM'}
     ]
 
-  // public getflowers()
-  // {
-  //   return this.Flowers;
-  // }
+    visible=true;
+  
+    constructor(public hello:SampleService,router:Router)
+    {
+     
+    }
+    Mycollection:any;
+    onbClick()
+    {
+      this.Mycollection=this.hello.get();
+  
+    }
 }

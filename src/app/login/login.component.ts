@@ -9,5 +9,6 @@ export class LoginComponent {
 
   login1(){
     console.log('Logged in');
+    
   }
 }

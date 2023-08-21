@@ -1,6 +1,6 @@
 
 
-<form style="margin: auto;width:220px">
+<form style="margin: auto;width:220px ">
     <div class="container">
         <h2>User Details</h2>
             <table class="table table-sm table-bordered m-t-2">
@@ -16,4 +16,12 @@
                 </tr>
             </table>
     </div>
+    <div *ngIf="visible" >
+        <ul>
+            <li *ngFor="let i of hello.get()">
+                {{i.name}} uses {{i.password}}as a password and working as {{i.designation}} in Techie
+            </li>
+        </ul>
+        </div>
+        <button (click)="onbClick">click</button>
 </form>

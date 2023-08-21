@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SampleService } from './sample.service';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private router:Router){
+  constructor(public hello:SampleService, private router:Router){
     
   }
   title = 'assign1';
   loginbtn()
   {
-    this.router.navigate(['cba']);
+    this.router.navigate(['login']);
   }
   dashbtn()
   {
-    this.router.navigate(['abc']);
+    this.router.navigate(['dashboard']);
   }
+  
+  
 }
