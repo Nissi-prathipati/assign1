@@ -8,18 +8,17 @@ import { SampleService } from './sample.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public hello:SampleService, private router:Router){
-    
+ 
+  //title = 'assign1';
+  title(title: any) {
+    throw new Error('Method not implemented.');
   }
-  title = 'assign1';
-  loginbtn()
-  {
-    this.router.navigate(['login']);
+  loggedIn: boolean = false;
+  loggedInUser: { userID: string } = { userID: '' };
+
+  onLoginSuccess(userData: { userID: string }) {
+    this.loggedIn = true;
+    this.loggedInUser.userID = userData.userID;
   }
-  dashbtn()
-  {
-    this.router.navigate(['dashboard']);
-  }
-  
   
 }

@@ -1,0 +1,57 @@
+/* Style the task list title */
+h2.mat-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* You can adjust the color to your preference */
+  }
+  
+  /* Style the navigation list */
+  mat-nav-list {
+    margin-top: 10px;
+  }
+  
+  /* Style the list items */
+  mat-list-item {
+    padding: 8px 0;
+    font-size: 18px;
+    color: #555; /* You can adjust the color to your preference */
+    cursor: pointer;
+    transition: color 0.2s; /* Smooth color transition on hover */
+  }
+  
+  mat-list-item:hover {
+    color: #007bff; /* Change color on hover, adjust as needed */
+  }
+  
+  /* Style the form field */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the "Add Task" button */
+  button.mat-raised-button {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color */
+    font-weight: bold;
+  }
+  
+  button.mat-raised-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  
+  /* Style the input field */
+  input.matInput {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  /* Remove default outline on input focus */
+  input.matInput:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color on focus */
+  }
+  

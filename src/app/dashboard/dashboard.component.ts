@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SampleService } from '../sample.service';
 import { Route, Router } from '@angular/router';
 
@@ -9,22 +9,13 @@ import { Route, Router } from '@angular/router';
 })
 export class DashboardComponent {
 
-  User=[
-    {name:'Navya',age:'20',designation:'GET'},
-    {name:'Anu',age:'27',designation:'HR'},   
-    {name:'Kavya',age:'25',designation:'RM'}
-    ]
+  @Input() userID: string ;
 
-    visible=true;
-  
-    constructor(public hello:SampleService,router:Router)
-    {
-     
-    }
-    Mycollection:any;
-    onbClick()
-    {
-      this.Mycollection=this.hello.get();
-  
-    }
+ 
+  collection: string[];
+
+  constructor() {
+    this.collection = ['Nissi', 'Havi', 'Vini'];
+    this.userID= '';
+  }
 }

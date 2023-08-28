@@ -1,9 +1,12 @@
-<br>
-<div class="navbar">
-    <button (click)="loginbtn()"><i class="fa fa-fw fa-Login"></i>Login</button>
-    <br>
 
-<br>
-<button (click)="dashbtn()">Dashboard</button><br>
-<router-outlet></router-outlet>
+<div class="center-content">
+    <button mat-raised-button color="primary" class="navigation-button" routerLink="/login">Go to Login</button>
+    <button mat-raised-button color="primary" class="navigation-button" routerLink="/dashboard">Go to Dashboard</button>
+
+    <br /><br /><br /><br />
+
+    <router-outlet></router-outlet>
+
+    <br /><br />
+    <app-sample></app-sample>
 </div>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +9,31 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  login1(){
-    console.log('Logged in');
-    
+  @Output() loginSuccess: EventEmitter<{ userID: string }> = new EventEmitter<{ userID: string }>();
+  loginForm: FormGroup; // Declare the form group
+
+  constructor(private fb: FormBuilder, private route: Router) {
+    this.loginForm = this.fb.group({
+      userID: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
+  }
+
+  get userID() {
+    return this.loginForm.get('userID');
+  }
+
+  get password() {
+    return this.loginForm.get('password');
+  }
+
+  login() {
+    if (this.loginForm.valid) {
+      const userID = this.loginForm.value.userID;
+      // Do something with the user ID
+      this.route.navigate(['/dashboard']);
+    } else {
+      alert('please enter valid input fields');
+    }
   }
 }
